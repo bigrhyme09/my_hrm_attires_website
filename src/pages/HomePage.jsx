@@ -510,7 +510,7 @@ const HomePage = () => {
         <div className="mx-auto w-full max-w-[88rem] px-5 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <img src="https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/0898ca6393fbfbbb39906a378a7796bf.png" alt="HRM Attires" className="w-[170px] h-auto object-contain" />
           <p className="text-[10px] uppercase tracking-[0.18em]">
-            © 2026 H.R.M ATTIRES USA INC. ALL RIGHTS RESERVED
+            © 2026 HRM ATTIRES USA INC. ALL RIGHTS RESERVED
           </p>
           <div className="flex gap-6 text-[10px] uppercase tracking-[0.14em]">
             {NAV.map(([label, href]) => <a key={href} href={href} className="hover:text-white transition-colors">{label}</a>)}
