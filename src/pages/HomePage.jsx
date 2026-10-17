@@ -6,12 +6,8 @@ import Reveal from '@/components/Reveal';
 import CountUp from '@/components/CountUp';
 import Seo from '@/components/Seo';
 const IMGS = {
-  factory: 'https://images.hostinger.com/7a3e39e8-5919-4672-abef-9514688b1dbe.png',
-  garments: 'https://images.hostinger.com/4b0906a6-0086-44fa-9f32-4a07b1dff99c.png',
-  retail: 'https://images.hostinger.com/a9e75979-5547-4a1f-a409-bb091c1e358e.png',
-  knit: 'https://images.hostinger.com/3dfc0be5-fe58-41a4-bb1d-72093dc02472.png',
-  shipping: 'https://images.hostinger.com/ad31e95f-f6c2-4ca7-897f-83b1e01a00ff.png',
-  eco: 'https://images.hostinger.com/3d755209-98eb-4193-a1f1-b2e407cb154a.png'
+  // Preview picture shown when the link is shared on WhatsApp / LinkedIn / etc. (needs the full web address)
+  factory: 'https://hrmattires.com/images/social-share.jpg'
 };
 const NAV = [['About', '#about'], ['Products', '#products'], ['Quality', '#quality'], ['Markets', '#markets'], ['Sustainability', '#sustainability'], ['Contact', '#contact']];
 const STATS = [{
@@ -34,40 +30,40 @@ const STATS = [{
 // To pick files from your media library, open the Assets/Media panel in the
 // editor, copy each image's URL, and paste it into one of the 7 slots.
 // ─────────────────────────────────────────────────────────────────────────
-const HERO_BG_IMAGES = ['https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/dd9edfe3a104af51262f77c2bfcbd9fc.webp',
+const HERO_BG_IMAGES = ['/images/hero-1-puffer-vests.jpg',
 // Couple in puffer vests (black and red)
-'https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/9eff19e08c051ee3fe35adf731545d0b.jpg',
+'/images/hero-2-factory-exterior.jpg',
 // Factory exterior with parked loading truck
-'https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/383498a3474704cc5abfa1a4c17c66ec.jpg',
+'/images/hero-3-front-office-reception.jpg',
 // HRM front office reception desk with visitors
-'https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/2eb0e71b2ae02ac0efecffa85fe4a3c7.webp',
+'/images/hero-4-kids-hoodies.jpg',
 // Three smiling kids wearing hoodies
-'https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/61ce18ed2f35bec615f3e5cf2b9b22d0.png',
+'/images/hero-5-knitting-factory-floor.jpg',
 // Textile factory floor with operators running knitting machinery
-'https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/ef404b29128b2c480a6efec27f41fe0f.jpg',
+'/images/hero-6-facility-golf-cart.jpg',
 // Facility grounds with the white electric golf cart
-'https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/0929a0608620500258dad32697cb946a.jpg' // Factory fire safety and emergency response equipment station
+'/images/hero-7-fire-safety-station.jpg' // Factory fire safety and emergency response equipment station
 ].filter(Boolean);
 const PRODUCTS = [{
   pct: '65%',
   name: 'Circular Knit',
   items: 'T-shirts · Polo shirts · Hoodies · Sweatshirts · Activewear',
-  image: 'https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/93c0a1bba950016cd7626971449f3386.webp'
+  image: '/images/product-circular-knit.jpg'
 }, {
   pct: '20%',
   name: 'Woven Wear',
   items: 'Casual & dress shirts · Trousers · Chinos · Cargo pants · Outerwear',
-  image: 'https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/ab721579f7d122eeba9ee8a1b734de38.jpg'
+  image: '/images/product-woven-wear.jpg'
 }, {
   pct: '10%',
   name: 'Flat Knit',
   items: 'Sweaters · Cardigans · Fine knitwear',
-  image: 'https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/cd418250f7949048de57b3eec8f1a43c.png'
+  image: '/images/product-flat-knit.jpg'
 }, {
   pct: '5%',
   name: 'Formal & Denim',
   items: 'Tailored suits · Dresses · Premium jeans with eco-finishing',
-  image: 'https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/34949a86972594b643b2e80deb063b5b.webp'
+  image: '/images/product-formal-denim.jpg'
 }];
 const CERTS = ['ISO Certified', 'ACCORD', 'RSC', 'BSCI', 'WRAP', 'OEKO-TEX 100', 'Sedex', 'GOTS', 'GRS', 'FSC'];
 const CLIENTS = ['Piazza Italia S.p.A.', 'Essemoda SRL', 'Baci & Abbracci', 'Sonny Bono', 'Clayton', 'Cotton & Silk', 'M and M Direct', 'Blue Inc', 'Next', 'Promod', 'Obaïbi-Okaïdi', 'Happychic', 'Chicorée', 'Whispering Smith', 'Pimkie'];
@@ -136,7 +132,7 @@ const HomePage = () => {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-[hsl(var(--border))]">
         <div className="mx-auto flex h-24 max-w-[88rem] items-center justify-between px-5 lg:px-10">
           <a href="#top" className="flex items-center">
-            <img src="https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/9c67d3a00b121b58d87158c7f8ed3270.png" alt="HRM Attires" className="h-16 w-auto object-contain" style={{
+            <img src="/images/logo.png" alt="HRM Attires" className="h-16 w-auto object-contain" style={{
             mixBlendMode: 'multiply'
           }} />
           </a>
@@ -262,17 +258,17 @@ const HomePage = () => {
               <div className="grid gap-1 grid-cols-2 grid-rows-2 h-[500px]">
                 {/* Dominant large image - spans 1 col, 2 rows (left side) */}
                 <div className="row-span-2 overflow-hidden">
-                  <img src="https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/screenshot-2026-08-11-at-5.24.49a-pm-GyZY9.png" alt="HRM Attires front office" className="w-full h-full object-cover" />
+                  <img src="/images/about-front-office.jpg" alt="HRM Attires front office" className="w-full h-full object-cover" />
                 </div>
                 
                 {/* Top right accent image */}
                 <div className="overflow-hidden">
-                  <img src="https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/screenshot-2026-08-11-at-4.42.19a-pm-kWdsU.png" alt="HRM team" className="w-full h-full object-cover" />
+                  <img src="/images/about-team.jpg" alt="HRM team" className="w-full h-full object-cover" />
                 </div>
                 
                 {/* Bottom right accent image - now spans full height */}
                 <div className="overflow-hidden">
-                  <img src="https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/screenshot-2026-08-11-at-4.33.46a-pm-KsRS7.png" alt="HRM quality labels" className="w-full h-full object-cover" />
+                  <img src="/images/about-quality-labels.jpg" alt="HRM quality labels" className="w-full h-full object-cover" />
                 </div>
               </div>
             </Reveal>
@@ -327,13 +323,13 @@ const HomePage = () => {
                 </div>
                 <div className="mt-6 grid grid-cols-3 gap-3">
                   <div className="overflow-hidden aspect-[4/3]">
-                    <img src="https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/screenshot-2026-08-11-at-9.33.28a-pm-2ok83.png" alt="HRM quality assurance team" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                    <img src="/images/quality-assurance-team.jpg" alt="HRM quality assurance team" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="overflow-hidden aspect-[4/3]">
-                    <img src="https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/screenshot-2026-08-11-at-5.23.34a-pm-XLVaB.png" alt="HRM trade fair booth" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                    <img src="/images/quality-trade-fair-booth.jpg" alt="HRM trade fair booth" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="overflow-hidden aspect-[4/3]">
-                    <img src="https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/hrm-gms-factory_q1060630web-0IDVy.jpg" alt="HRM team" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                    <img src="/images/quality-factory-team.jpg" alt="HRM team" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
                 <div className="mt-6 border-t border-white/12 pt-6">
@@ -408,7 +404,7 @@ const HomePage = () => {
 
       {/* SUSTAINABILITY */}
       <section id="sustainability" className="relative py-24 lg:py-32 overflow-hidden">
-        <img src="https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/96bba5d4dce195c960b4ecf6c0566fef.png" alt="HRM ETP plant aerial view" className="absolute inset-0 w-full h-full object-cover opacity-25" />
+        <img src="/images/sustainability-etp-plant-aerial.jpg" alt="HRM ETP plant aerial view" className="absolute inset-0 w-full h-full object-cover opacity-25" />
         <div className="absolute inset-0 bg-[hsl(40_15%_97%)]/88" />
         <div className="relative mx-auto w-full max-w-[88rem] px-5 lg:px-10">
           <div className="grid gap-14 lg:grid-cols-2 lg:gap-20 items-center">
@@ -426,7 +422,7 @@ const HomePage = () => {
             <Reveal delay={0.1}>
               <div className="bg-white border border-[hsl(var(--border))] p-6 max-w-md">
                 <div className="overflow-hidden aspect-[16/9] mb-6 -mx-6 -mt-6">
-                  <img src="https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/49c270badbc41747e9adf082915d715a.webp" alt="HRM Fair4All charity donation event" className="w-full h-full object-cover object-top" />
+                  <img src="/images/sustainability-fair4all-event.jpg" alt="HRM Fair4All charity donation event" className="w-full h-full object-cover object-top" />
                 </div>
                 <div className="flex items-start gap-3 mb-4">
                   <div className="h-8 w-8 shrink-0 bg-[hsl(var(--brand))] flex items-center justify-center">
@@ -508,7 +504,7 @@ const HomePage = () => {
       {/* FOOTER */}
       <footer className="bg-black text-white/50 py-10">
         <div className="mx-auto w-full max-w-[88rem] px-5 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <img src="https://horizons-cdn.hostinger.com/492369c6-2d74-4005-b31a-9a77f81b0f5d/0898ca6393fbfbbb39906a378a7796bf.png" alt="HRM Attires" className="w-[170px] h-auto object-contain" />
+          <img src="/images/logo-light.png" alt="HRM Attires" className="w-[170px] h-auto object-contain" />
           <p className="text-[10px] uppercase tracking-[0.18em]">
             © 2026 HRM ATTIRES USA INC. ALL RIGHTS RESERVED
           </p>
